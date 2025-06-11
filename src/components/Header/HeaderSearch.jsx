@@ -7,7 +7,7 @@ function HeaderSearch() {
       <Clock />
       <form className="relative w-[200px] h-[40px]">
         <input
-          className="w-full h-full pl-4 pr-10 bg-[#FFF8E1] text-gray-800 rounded-full shadow-md outline-none"
+          className="w-full h-full pl-4 pr-10 bg-[#FFF8E1] text-gray-800 rounded-full shadow-search outline-none hover:shadow-search-hover transition-all duration-300"
           placeholder="Tìm kiếm..."
         />
         <button
