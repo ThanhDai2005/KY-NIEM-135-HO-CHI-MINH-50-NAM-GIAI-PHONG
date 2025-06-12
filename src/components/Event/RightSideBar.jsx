@@ -16,12 +16,10 @@ function RightSideBar() {
   return (
     <>
       <div className="p-6 m-4 rounded-lg shadow-lg ">
-        <h6 className="flex items-center gap-2 text-xl font-bold mb-[7px]">
-          <span>
-            <FavoriteIcon className="text-[#ED3E32]" />
-          </span>
+        <h3 className="flex items-center gap-2 text-xl font-bold mb-[7px]">
+          <FavoriteIcon className="text-[#ED3E32]" />
           <span>Lời tri ân</span>
-        </h6>
+        </h3>
         <form onSubmit={handleSubmit}>
           <TextField
             fullWidth
@@ -64,9 +62,7 @@ function RightSideBar() {
             className="w-full mt-4 py-[6px] px-4  text-white text-sm rounded flex items-center gap-2 justify-center font-medium shadow-submit bg-gradient-to-br from-[rgb(213,92,92)] to-[rgb(251,209,0)] hover:text-black hover:from-[rgb(255,163,163)] hover:to-[rgb(255,247,210)] hover:shadow-submit-hover transition-all duration-300"
           >
             <span>GỬI CẢM NGHĨ</span>
-            <span>
-              <SendIcon fontSize="small" />
-            </span>
+            <SendIcon fontSize="small" />
           </button>
         </form>
       </div>

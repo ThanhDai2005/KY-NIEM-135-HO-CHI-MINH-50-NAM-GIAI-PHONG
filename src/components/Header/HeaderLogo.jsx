@@ -10,17 +10,17 @@ function HeaderLogo() {
           />
         </div>
         <div>
-          <h6 className=" text-[11.2px] sm:text-base text-[#555555] mb-2 italic">
+          <h3 className=" text-[11.2px] sm:text-base text-[#555555] mb-2 italic">
             Trường Đại học Sài Gòn - Khoa Công Nghệ Thông tin nhiệt liệt chào
             mừng
-          </h6>
-          <h6 className="text-base md:text-xl text-[#C41E3A] mb-1 font-bold text-shadow-gold">
+          </h3>
+          <h3 className="text-base md:text-xl text-[#C41E3A] mb-1 font-bold text-shadow-gold">
             KỶ NIỆM 135 NĂM NGÀY SINH CHỦ TỊCH HỒ CHÍ MINH (19/5/1890 –
             19/5/2025)
-          </h6>
-          <h6 className="text-base md:text-xl text-[#C41E3A] mb-1 font-bold text-shadow-gold">
+          </h3>
+          <h3 className="text-base md:text-xl text-[#C41E3A] mb-1 font-bold text-shadow-gold">
             CHÀO MỪNG 50 NĂM THỐNG NHẤT ĐẤT NƯỚC (30/4/1975 – 30/4/2025)
-          </h6>
+          </h3>
           <p className="text-[14.4px] sm:text-base text-[#555555] italic">
             Tôn vinh những dấu mốc lịch sử hào hùng và truyền cảm hứng về lòng
             yêu nước, tự hào dân tộc.
