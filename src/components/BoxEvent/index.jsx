@@ -26,6 +26,53 @@ function BoxEvent(props) {
     return match && match[2].length === 11 ? match[2] : null;
   };
 
+  const renderContent = (content) => {
+    if (!content) return null;
+
+    const paragraphs = content.split("<br />");
+
+    return paragraphs.map((item, index) => {
+      const hasImage = item.includes("[img]");
+
+      if (hasImage) {
+        const parts = item.split("[img]");
+        const imageContent = parts[1].split("[/img]")[0];
+        const text = parts[0] + parts[1].split("[/img]")[1]; // trường hợp trước [/img] và sau [/img] có nội dung
+        const [image, caption] = imageContent.split("|");
+
+        return (
+          // Phần hình ảnh
+          <>
+            {text && (
+              <p className="mb-4 leading-[1.8] text-justify indent-5">{text}</p>
+            )}
+            {image && (
+              <div className="mb-6">
+                <img
+                  className="object-contain w-full rounded-lg shadow-img-dialog"
+                  src={image}
+                />
+                {caption && (
+                  <p className="bg-[#f6f6f6] mt-1 mb-2 py-1 px-2 text-center mx-auto max-w-[80%] italic rounded text-[#00000099] leading-[1.66] opacity-80 tracking-[0.03333em]">
+                    {caption}
+                  </p>
+                )}
+              </div>
+            )}
+          </>
+        );
+      }
+      return (
+        // Phần nội dung còn lại
+        <>
+          {item && (
+            <p className="mb-4 leading-[1.8] text-justify indent-5">{item}</p>
+          )}
+        </>
+      );
+    });
+  };
+
   return (
     <>
       <motion.div
@@ -151,8 +198,10 @@ function BoxEvent(props) {
                 {item.description}
               </h3>
             </div>
+            <div className="p-6 bg-[#FAFAFA] border border-[#EDEDED] rounded-xl">
+              {renderContent(item.details)}
+            </div>
           </div>
-          <div className="p-6 bg-[#FAFAFA] border border-[#EDEDED] rounded-xl"></div>
         </DialogContent>
       </Dialog>
     </>

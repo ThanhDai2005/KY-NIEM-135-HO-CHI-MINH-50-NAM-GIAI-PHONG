@@ -2,8 +2,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
-import { giaiPhongEvents } from "../../data/Events";
+import { giaiPhongEvents, hcmEvents } from "../../data/Events";
 import BoxEvent from "../BoxEvent";
+import { hoChiMinhTimeline } from "../../data/HoChiMinhTimeLine";
+import HoChiMinhTimeLine from "../BoxEvent/HoChiMinhTimeLine";
 
 function LeftSideBar() {
   const settings = {
@@ -51,6 +53,37 @@ function LeftSideBar() {
             ))}
           </Slider>
         </div>
+      </div>
+      <div className="px-6 py-10">
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-[40px] leading-[1.167] font-bold text-center mb-4 text-shadow-event text-[#e74c3c]"
+        >
+          CÁC SỰ KIỆN KỶ NIỆM 135 NĂM NGÀY SINH CHỦ TỊCH HỒ CHÍ MINH (19/5/1890
+          – 19/5/2025)
+        </motion.h3>
+        <div className="my-8">
+          <Slider {...settings}>
+            {hcmEvents.map((item, index) => (
+              <BoxEvent index={index} item={item} />
+            ))}
+          </Slider>
+        </div>
+      </div>
+      <div className="px-6 py-12">
+        <motion.h3
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className=" text-4xl leading-[1.5] font-bold text-center mb-12 text-shadow-event text-[#f14c40]"
+        >
+          CON ĐƯỜNG GIẢI PHÓNG DÂN TỘC CỦA CHỦ TỊCH HỒ CHÍ MINH
+        </motion.h3>
+        {hoChiMinhTimeline.map((item, index) => (
+          <HoChiMinhTimeLine index={index} item={item} />
+        ))}
       </div>
     </>
   );
