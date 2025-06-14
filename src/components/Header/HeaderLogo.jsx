@@ -1,14 +1,21 @@
+import { motion } from "framer-motion";
+
 function HeaderLogo() {
   return (
     <>
       <div className="flex items-center gap-4 lg:gap-6 ">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <img
             src="/SGU-LOGO.png"
             alt="Logo SGU"
             className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] object-contain min-w-[80px] min-h-[80px] transition-all duration-300 hover:scale-105"
           />
-        </div>
+        </motion.div>
         <div>
           <h3 className=" text-[11.2px] sm:text-base text-[#555555] mb-2 italic">
             Trường Đại học Sài Gòn - Khoa Công Nghệ Thông tin nhiệt liệt chào

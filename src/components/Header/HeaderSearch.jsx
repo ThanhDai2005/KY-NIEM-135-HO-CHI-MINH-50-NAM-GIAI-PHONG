@@ -1,9 +1,16 @@
 import Clock from "./Clock";
 import SearchIcon from "@mui/icons-material/Search";
+import { motion } from "framer-motion";
 
 function HeaderSearch() {
   return (
-    <div className="hidden space-y-2 lg:block">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.2 }}
+      viewport={{ once: true }}
+      className="hidden space-y-2 lg:block"
+    >
       <Clock />
       <form className="relative w-[200px] h-[40px]">
         <input
@@ -17,7 +24,7 @@ function HeaderSearch() {
           <SearchIcon className="text-[#c41e3a] size-6" />
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

@@ -82,7 +82,7 @@ function LeftSideBar() {
           CON ĐƯỜNG GIẢI PHÓNG DÂN TỘC CỦA CHỦ TỊCH HỒ CHÍ MINH
         </motion.h3>
         {hoChiMinhTimeline.map((item, index) => (
-          <HoChiMinhTimeLine index={index} item={item} />
+          <HoChiMinhTimeLine key={index} index={index} item={item} />
         ))}
       </div>
     </>
