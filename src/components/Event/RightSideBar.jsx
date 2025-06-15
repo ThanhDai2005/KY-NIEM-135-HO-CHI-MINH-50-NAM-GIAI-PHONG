@@ -123,7 +123,7 @@ function RightSideBar() {
           </>
         )}
       </div>
-      <div className="sticky top-[80px] z-10 py-6 h-[calc(100vh-80px)] ">
+      <div className="sticky top-[80px] z-10 py-6 sm:h-[calc(100vh-80px)] ">
         <div className="p-6 m-4 text-[#000000] rounded-lg shadow-quote bg-[linear-gradient(135deg,rgb(227,149,149),rgb(248,220,78))]">
           <div className="flex items-center gap-2 mb-[7px]">
             <FaQuoteLeft className="text-xl" />

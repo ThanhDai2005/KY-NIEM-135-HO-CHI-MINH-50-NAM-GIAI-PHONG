@@ -61,8 +61,8 @@ function Footer() {
   return (
     <>
       <footer className=" bg-[#1976D2]">
-        <div className="container pt-[50px] pb-[20px] px-3">
-          <div className="text-[#000000] grid grid-cols-4 gap-6">
+        <div className="container mx-auto pt-[50px] pb-[20px] px-3">
+          <div className="text-[#000000] sm:grid grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
               <h3 className="relative mb-5 text-2xl font-bold text-white after:absolute after:h-[3px] after:w-[50px] after:left-0 after:-bottom-2 after:bg-[#FFD700] after:rounded-full">
                 CHÀO MỪNG

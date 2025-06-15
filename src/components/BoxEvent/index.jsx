@@ -84,8 +84,6 @@ function BoxEvent(props) {
           duration: 0.8,
           delay: index * 0.2,
           type: "spring",
-          stiffness: 100,
-          damping: 10,
         }}
         whileHover={{
           scale: 1.02,
