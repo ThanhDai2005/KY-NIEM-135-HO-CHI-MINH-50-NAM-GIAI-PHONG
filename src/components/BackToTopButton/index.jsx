@@ -31,7 +31,7 @@ function BackToTopButton() {
             exit={{ opacity: 0, scale: 0 }}
             transition={{ duration: 0.3 }}
             onClick={handleBackToTop}
-            class="fixed bottom-20 right-6 z-30 flex items-center justify-center rounded-full bg-[#ED6C02] w-10 h-10 shadow-back-to-top text-white transition-all duration-300 hover:bg-[#e65100]"
+            className="fixed bottom-20 right-6 z-30 flex items-center justify-center rounded-full bg-[#ED6C02] w-10 h-10 shadow-back-to-top text-white transition-all duration-300 hover:bg-[#e65100]"
           >
             <KeyboardArrowUpIcon />
           </motion.button>
