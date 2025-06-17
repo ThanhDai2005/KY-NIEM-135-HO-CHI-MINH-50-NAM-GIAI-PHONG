@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
+import { duration } from "@mui/material/styles";
 
 function Celebrate() {
   const timelineSteps = [
@@ -34,7 +35,7 @@ function Celebrate() {
 
   return (
     <>
-      <div className="grid grid-cols-5 gap-6">
+      <div className="grid-cols-5 gap-6 md:grid">
         <div className="col-span-2">
           <motion.h3
             initial={{ opacity: 0, y: -50 }}
@@ -54,7 +55,7 @@ function Celebrate() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.15 }}
                   >
-                    <h3 className="text-xl font-Roboto leading-[1.6]  font-normal">
+                    <h3 className="text-xl font-Roboto leading-[1.6] font-normal">
                       {item.year}
                     </h3>
                     <p className="text-base font-normal font-Roboto">
@@ -75,6 +76,23 @@ function Celebrate() {
           >
             HÌNH ẢNH TIÊU BIỂU
           </motion.h3>
+
+          <div className="grid-cols-2 gap-6 sm:grid">
+            {galleryImages.map((item, index) => (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.12 }}
+                whileHover={{ transition: { duration: 0.3 }, scale: 1.05 }}
+                className="mt-6"
+              >
+                <img
+                  className="h-[150px] w-full rounded object-cover "
+                  src={item}
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </>

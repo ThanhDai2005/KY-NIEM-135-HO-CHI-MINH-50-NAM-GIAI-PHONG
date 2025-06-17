@@ -49,7 +49,7 @@ function Navbar() {
   return (
     <>
       {/* Navigation Bar */}
-      <div className="sticky top-0 z-20 bg-gradient-to-r from-[#98D7EC] via-[#1D82E0] to-[#98D7EC] shadow-md py-2 px-4 flex items-center justify-between md:justify-center">
+      <div className="sticky top-0 z-20 bg-gradient-to-r from-[#98D7EC] via-[#1D82E0] to-[#98D7EC] shadow-md py-4 md:py-2 flex items-center justify-between md:justify-center">
         {/* Mobile menu button */}
         <div className="md:hidden">
           <IconButton onClick={toggleDrawer} size="large">

@@ -31,11 +31,12 @@ function AboutHCM() {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-6 mb-6">
+      <div className="grid-cols-2 gap-6 lg:grid ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="mb-6"
         >
           <h3 className="relative text-[32px] mb-12 text-[#ED3E32] font-bold text-center after:absolute after:h-[4px] after:w-[100px] after:bg-[#007BFF] after:rounded-full after:left-1/2 after:-translate-x-1/2 after:-bottom-1.5">
             CON NGƯỜI VĨ ĐẠI
@@ -69,6 +70,7 @@ function AboutHCM() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="mb-12"
         >
           <h3 className="relative text-[32px] mb-12 text-[#ED3E32] font-bold text-center after:absolute after:h-[4px] after:w-[100px] after:bg-[#007BFF] after:rounded-full after:left-1/2 after:-translate-x-1/2 after:-bottom-1.5">
             THÔNG ĐIỆP HÔM NAY

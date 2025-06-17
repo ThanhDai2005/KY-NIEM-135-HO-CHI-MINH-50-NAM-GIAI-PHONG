@@ -12,8 +12,8 @@ function HistoricalMeaning() {
         <h3 className="relative text-[40px] mb-12 text-[#ED3E32] font-bold text-center after:absolute after:h-[4px] after:w-[100px] after:bg-[#007BFF] after:rounded-full after:left-1/2 after:-translate-x-1/2 after:-bottom-1.5">
           Ý NGHĨA LỊCH SỬ
         </h3>
-        <div className="grid grid-cols-2 gap-6 mt-6 mb-12">
-          <div className="p-6 transition-all duration-300 bg-white rounded shadow-historical-meaning hover:scale-105">
+        <div className="grid-cols-2 gap-6 mt-6 mb-12 lg:grid">
+          <div className="p-6 mt-6 transition-all duration-300 bg-white rounded shadow-historical-meaning hover:scale-105">
             <h3 className="text-2xl font-bold">
               135 NĂM NGÀY SINH CHỦ TỊCH HỒ CHÍ MINH (19/5/1890 – 19/5/2025)
             </h3>
@@ -30,7 +30,7 @@ function HistoricalMeaning() {
               Tổ quốc.
             </p>
           </div>
-          <div className="p-6 transition-all duration-300 bg-white rounded shadow-historical-meaning hover:scale-105 ">
+          <div className="p-6 mt-6 transition-all duration-300 bg-white rounded shadow-historical-meaning hover:scale-105">
             <h3 className="text-2xl font-bold">
               50 NĂM GIẢI PHÓNG MIỀN NAM THỐNG NHẤT ĐẤT NƯỚC (30/4/1975 –
               30/4/2025)
