@@ -3,6 +3,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import ScrollToTop from "../BackToTopButton/ScrollToTop";
 import BackToTopButton from "../BackToTopButton";
+import BackgroundMusic from "../BackgroundMusic";
 
 function Layout() {
   return (
@@ -14,6 +15,7 @@ function Layout() {
       </main>
       <Footer />
       <BackToTopButton />
+      <BackgroundMusic />
     </>
   );
 }
