@@ -43,10 +43,10 @@ function AboutHCM() {
           </h3>
           <div>
             <img
-              className="mb-4 mr-4 float-left border-2 w-[150px] h-auto object-cover border-[#FFD700] rounded shadow-aboutHCM transition-all duration-300 hover:scale-105"
+              className="mb-4 mr-4 float-left border-2 w-[120px] md:w-[150px] h-auto object-cover border-[#FFD700] rounded shadow-aboutHCM transition-all duration-300 hover:scale-105 hover:shadow-aboutHCM-hover"
               src="./images/bacHoAVT.jpg"
             />
-            <p className="text-justify leading-[1.6]">
+            <p className="text-justify leading-[1.6] text-[14.4px] sm:text-[16px]">
               Sinh ra tại làng Sen, quê hương Nghệ An, từ rất sớm Bác đã rời Tổ
               quốc đi tìm đường cứu nước, bôn ba khắp năm châu để tìm con đường
               giải phóng dân tộc. Với ý chí kiên cường và tấm lòng yêu nước
