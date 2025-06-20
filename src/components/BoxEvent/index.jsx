@@ -11,9 +11,12 @@ function BoxEvent(props) {
   const { item, index } = props;
 
   const [open, setOpen] = useState(false);
+  const [event, setEvent] = useState({});
 
-  const handleClickOpen = () => {
+  const handleClickOpen = (events) => {
     setOpen(true);
+    setEvent(events);
+    console.log(events);
   };
   const handleClose = () => {
     setOpen(false);
@@ -31,7 +34,7 @@ function BoxEvent(props) {
 
     const paragraphs = content.split("<br />");
 
-    return paragraphs.map((item, index) => {
+    return paragraphs.map((item) => {
       const hasImage = item.includes("[img]");
 
       if (hasImage) {
@@ -114,7 +117,7 @@ function BoxEvent(props) {
         <div className="px-4 pb-4">
           <button
             className="w-full py-[6px] px-4 text-sm text-white rounded bg-[#EB7474] shadow-chitiet hover:opacity-90 font-medium leading-[1.75]"
-            onClick={handleClickOpen}
+            onClick={() => handleClickOpen(item)}
           >
             XEM CHI TIẾT
           </button>
@@ -134,73 +137,77 @@ function BoxEvent(props) {
           },
         }}
       >
-        <div className="py-2 px-4 bg-[#EB7474] flex items-center ">
-          <h2 className="flex-grow text-2xl font-bold text-center text-white text-shadow-title-dialog">
-            {item.title}
-          </h2>
-          <IconButton
-            sx={{
-              color: "white",
-              "&:hover": {
-                backgroundColor: "#ffffff1a",
-              },
-            }}
-            onClick={handleClose}
-          >
-            <CloseIcon />
-          </IconButton>
-        </div>
-        <DialogContent
-          sx={{
-            p: 0,
-          }}
-        >
-          <div className="flex items-center justify-between px-6 py-4">
-            <div className="flex items-center">
-              <CalendarTodayIcon className="mr-2 text-[#EB7474]" />
-              <span className="text-xl">{item.date}</span>
+        {event && (
+          <>
+            <div className="py-2 px-4 bg-[#EB7474] flex items-center ">
+              <h2 className="flex-grow text-2xl font-bold text-center text-white text-shadow-title-dialog">
+                {event.title}
+              </h2>
+              <IconButton
+                sx={{
+                  color: "white",
+                  "&:hover": {
+                    backgroundColor: "#ffffff1a",
+                  },
+                }}
+                onClick={handleClose}
+              >
+                <CloseIcon />
+              </IconButton>
             </div>
-            <div className="flex items-center">
-              <LocationOnIcon className="mr-2 text-[#EB7474]" />
-              <span className="text-xl">{item.location}</span>
-            </div>
-          </div>
-          <div className="px-6 mb-6">
-            {item.video ? (
-              <>
-                <div className="relative pt-[56.25%] overflow-hidden rounded-xl shadow-img-dialog">
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src={`https://www.youtube.com/embed/${getYouTubeVideoId(
-                      item.video
-                    )}?rel=0`}
-                    title={item.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+            <DialogContent
+              sx={{
+                p: 0,
+              }}
+            >
+              <div className="items-center justify-between px-6 py-4 sm:flex">
+                <div className="flex items-center">
+                  <CalendarTodayIcon className="mr-2 text-[#EB7474]" />
+                  <span className="text-xl">{event.date}</span>
                 </div>
-              </>
-            ) : (
-              <>
-                <img
-                  className="object-contain w-full h-auto rounded-xl shadow-img-dialog"
-                  src={item.image}
-                />
-              </>
-            )}
-          </div>
-          <div className="p-6">
-            <div className="p-6 mb-6 bg-[#EBF4FF] rounded-xl border border-[#BCDBFF]">
-              <h3 className="text-xl text-[#4396E9] font-bold leading-[1.8]">
-                {item.description}
-              </h3>
-            </div>
-            <div className="p-6 bg-[#FAFAFA] border border-[#EDEDED] rounded-xl">
-              {renderContent(item.details)}
-            </div>
-          </div>
-        </DialogContent>
+                <div className="flex items-center">
+                  <LocationOnIcon className="mr-2 text-[#EB7474]" />
+                  <span className="text-xl">{event.location}</span>
+                </div>
+              </div>
+              <div className="px-6 mb-6">
+                {event.video ? (
+                  <>
+                    <div className="relative pt-[56.25%] overflow-hidden rounded-xl shadow-img-dialog">
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src={`https://www.youtube.com/embed/${getYouTubeVideoId(
+                          event.video
+                        )}?rel=0`}
+                        title={item.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <img
+                      className="object-contain w-full h-auto rounded-xl shadow-img-dialog"
+                      src={event.image}
+                    />
+                  </>
+                )}
+              </div>
+              <div className="p-6">
+                <div className="p-6 mb-6 bg-[#EBF4FF] rounded-xl border border-[#BCDBFF]">
+                  <h3 className="text-xl text-[#4396E9] font-bold leading-[1.8]">
+                    {event.description}
+                  </h3>
+                </div>
+                <div className="p-6 bg-[#FAFAFA] border border-[#EDEDED] rounded-xl">
+                  {renderContent(event.details)}
+                </div>
+              </div>
+            </DialogContent>
+          </>
+        )}
       </Dialog>
     </>
   );
