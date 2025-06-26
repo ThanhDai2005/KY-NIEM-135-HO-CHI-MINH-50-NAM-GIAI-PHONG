@@ -26,7 +26,7 @@ function QuizQuestionCard({
       transition={{ duration: 0.5 }}
     >
       <div className="p-4 pb-6 mt-8 bg-white shadow-quiz-history-question rounded-2xl">
-        <h2 className="text-lg font-semibold leading-[1.6] text-[#212121] mb-4">
+        <h2 className="text-[20px] font-semibold leading-[1.6] text-[#212121] mb-4">
           Câu hỏi {currentQuestion + 1}/{totalQuestions}
         </h2>
 
@@ -57,7 +57,7 @@ function QuizQuestionCard({
                   value={index}
                   onChange={onAnswerSelect}
                   checked={selectedAnswer == index}
-                  className="mr-2 w-5 h-5 accent-[#D32F2F] cursor-pointer bg-radio"
+                  className="mr-2 w-5 h-5 accent-[#D32F2F] cursor-pointer"
                 />
                 <span className="text-[#424242]">{option}</span>
               </label>

@@ -6,6 +6,7 @@ function HoChiMinhTimeLine(props) {
   return (
     <>
       <motion.div
+        key={index}
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: index * 0.1 }}

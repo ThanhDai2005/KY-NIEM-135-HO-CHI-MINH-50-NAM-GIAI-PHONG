@@ -32,6 +32,7 @@ function ImportantEvent() {
         if (item.events.length >= 2) {
           return (
             <motion.div
+              key={index}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: index * 0.15 }}
@@ -85,6 +86,7 @@ function ImportantEvent() {
 
         return item.events.map((events, index) => (
           <motion.div
+            key={index}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: index * 0.15 }}

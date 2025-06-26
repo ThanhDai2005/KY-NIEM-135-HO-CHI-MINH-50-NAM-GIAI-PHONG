@@ -13,7 +13,7 @@ function StartScreen({ onStartQuiz }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-[64px] mb-8 text-[#D32F2F] font-bold text-center text-shadow-quiz-history">
+          <h3 className="text-[40px] sm:text-[56px] lg:text-[64px] mb-8 text-[#D32F2F] font-bold text-center text-shadow-quiz-history">
             THỬ TÀI LỊCH SỬ
           </h3>
         </motion.div>

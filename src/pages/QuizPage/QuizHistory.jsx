@@ -32,7 +32,34 @@ function QuizHistory() {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
     } else if (timeLeft == 0) {
-      handleNextQuestion();
+      if (selectedAnswer != null) {
+        const isCorrect =
+          quizQuestions[currentQuestion].correctAnswerIndex == selectedAnswer;
+        setUserAnswers([
+          ...userAnswers,
+          {
+            correctAnswerIndex:
+              quizQuestions[currentQuestion].correctAnswerIndex,
+            selectedAnswer: selectedAnswer,
+            isCorrect: isCorrect,
+          },
+        ]);
+        if (isCorrect) {
+          setScore(score + 1);
+        }
+        handleNextQuestion();
+      } else {
+        setUserAnswers([
+          ...userAnswers,
+          {
+            correctAnswerIndex:
+              quizQuestions[currentQuestion].correctAnswerIndex,
+            selectedAnswer: selectedAnswer,
+            isCorrect: false,
+          },
+        ]);
+        handleNextQuestion();
+      }
     }
     return () => clearInterval(timer);
   }, [timeLeft, timeActive]);
@@ -85,11 +112,10 @@ function QuizHistory() {
 
   const handleShare = () => {
     const text = `Tôi đã đạt ${score}/${quizQuestions.length} điểm trong bài quiz về lịch sử! Hãy thử thách bản thân bạn!`;
-    window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-        window.location.href
-      )}"e=${encodeURIComponent(text)}`
-    );
+    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+      window.location.href
+    )}&quote=${encodeURIComponent(text)}`;
+    window.open(shareUrl, "_blank", "noopener,noreferrer");
   };
 
   const handleRestartQuiz = () => {
@@ -106,7 +132,7 @@ function QuizHistory() {
         <>
           <div>
             {/* Tiêu đề */}
-            <h3 className="text-[40px] text-[#D32F2F] font-bold text-center text-shadow-quiz-history2">
+            <h3 className="text-[24px] sm:text-[32px] lg:text-[40px] text-[#D32F2F] font-bold text-center text-shadow-quiz-history2">
               THỬ TÀI LỊCH SỬ CỦA BẠN NHÉ
             </h3>
 

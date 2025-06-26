@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import { duration } from "@mui/material/styles";
 
 function Celebrate() {
   const timelineSteps = [
@@ -51,6 +50,7 @@ function Celebrate() {
               <Step key={index} active={true}>
                 <StepLabel>
                   <motion.div
+                    key={index}
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.15 }}
@@ -80,6 +80,7 @@ function Celebrate() {
           <div className="grid-cols-2 gap-6 sm:grid">
             {galleryImages.map((item, index) => (
               <motion.div
+                key={index}
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
