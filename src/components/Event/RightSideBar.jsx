@@ -12,28 +12,57 @@ import { quotes } from "../../data/Quotes";
 import { AnimatePresence } from "framer-motion";
 
 function RightSideBar() {
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
+  const [data, setData] = useState({});
+  const [error, setError] = useState({});
   const [wish, setWish] = useState([]);
   const now = dayjs();
   const formatted = now.format("HH:mm:ss D/M/YYYY");
   const [quote, setQuote] = useState(quotes[0]);
 
+  const handleChange = (e) => {
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
+
+    setError({
+      ...error,
+      [e.target.name]: "",
+    });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!data.name) {
+      newErrors.name = "Hãy nhập tên của bạn";
+    }
+    if (!data.message) {
+      newErrors.message = "Hãy nhập lời chúc của bạn";
+    }
+
+    setError(newErrors);
+    return Object.keys(newErrors).length == 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name.trim() && message.trim()) {
-      setWish([
-        ...wish,
-        {
-          id: Date.now(),
-          name: name,
-          message: message,
-          time: formatted,
-        },
-      ]);
-    }
-    setName("");
-    setMessage("");
+    if (!validateForm()) return;
+
+    setWish([
+      ...wish,
+      {
+        id: Date.now(),
+        name: data.name,
+        message: data.message,
+        time: formatted,
+      },
+    ]);
+
+    setData({
+      name: "",
+      message: "",
+    });
   };
 
   const handleRandom = () => {
@@ -55,10 +84,11 @@ function RightSideBar() {
             margin="normal"
             variant="outlined"
             size="small"
-            value={name}
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
+            name="name"
+            value={data.name}
+            onChange={handleChange}
+            helperText={error.name}
+            error={error.name}
             sx={{
               "& .MuiOutlinedInput-root": {
                 "&:hover fieldset": {
@@ -73,12 +103,13 @@ function RightSideBar() {
             margin="normal"
             variant="outlined"
             size="small"
-            value={message}
+            name="message"
+            value={data.message}
             multiline
             rows={4}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
+            onChange={handleChange}
+            helperText={error.message}
+            error={error.message}
             sx={{
               "& .MuiOutlinedInput-root": {
                 "&:hover fieldset": {

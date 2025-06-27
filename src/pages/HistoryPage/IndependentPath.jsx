@@ -5,7 +5,7 @@ function IndependentPath() {
     <>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <h3 className="lg:text-[48px] text-[32px] text-[#F14C40] leading-[1.167] mb-4 font-bold text-shadow-event text-center">

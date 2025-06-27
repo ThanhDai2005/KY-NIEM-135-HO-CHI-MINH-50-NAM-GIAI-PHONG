@@ -1,8 +1,23 @@
 import Clock from "./Clock";
 import SearchIcon from "@mui/icons-material/Search";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function HeaderSearch() {
+  const navigate = useNavigate();
+
+  const [keywords, setKeyWords] = useState("");
+
+  const handleChange = (e) => {
+    setKeyWords(e.target.value);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/search?keywords=${keywords}`);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -12,8 +27,9 @@ function HeaderSearch() {
       className="hidden space-y-2 lg:block"
     >
       <Clock />
-      <form className="relative w-[200px] h-[40px]">
+      <form onSubmit={handleSearch} className="relative w-[200px] h-[40px]">
         <input
+          onChange={handleChange}
           className="w-full h-full pl-4 pr-10 bg-[#FFF8E1] text-gray-800 rounded-full shadow-search outline-none hover:shadow-search-hover transition-all duration-300"
           placeholder="Tìm kiếm..."
         />
