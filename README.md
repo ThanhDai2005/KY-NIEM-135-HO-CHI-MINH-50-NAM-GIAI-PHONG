@@ -37,7 +37,7 @@
 | 📅 Timeline       | Các mốc thời gian quan trọng trong cuộc đời Bác Hồ và lịch sử giải phóng miền Nam |
 | 🎵 Âm thanh       | Nhạc nền và âm thanh tư liệu lịch sử, có thể bật/tắt dễ dàng                      |
 | 🎮 Tương tác      | Modal chi tiết sự kiện, hiệu ứng chuyển động với Framer Motion                    |
-| 🔍 Đố vui lịch sử | Trắc nghiệm lịch sử, tính điểm, lưu điểm vào LocalStorage                         |
+| 🔍 Đố vui lịch sử | Trắc nghiệm lịch sử, tính điểm, chia sẻ kết quả lên Facebook                      |
 | 📝 Góp ý          | Form gửi lời chúc và góp ý, hiển thị dạng slider tự động                          |
 | 🌐 Đa ngôn ngữ    | Hỗ trợ tiếng Việt và tiếng Anh                                                    |
 
