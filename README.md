@@ -1,95 +1,69 @@
 # 🇻🇳 Website Kỷ niệm 50 năm Giải phóng miền Nam và 135 năm ngày sinh Chủ tịch Hồ Chí Minh
 
-<div align="center">
-  <h2>🌐 Link Website: <a href="https://ky-niem-135-ho-chi-minh-50-nam-giai.vercel.app/">https://ky-niem-135-ho-chi-minh-50-nam-giai.vercel.app/</a></h2>
-</div>
+🌐 **Link Website**: [https://ky-niem-135-ho-chi-minh-50-nam-giai.vercel.app](https://ky-niem-135-ho-chi-minh-50-nam-giai.vercel.app)
+
+---
 
 ## 📸 Giao diện
 
-<div style="display: block" align="center">
-  <h3>Trang Chủ</h3>
+### Trang Chủ
 
-![alt text](public/TrangChu.png)
+![Trang Chủ](public/TrangChu.png)
 
-  <h3>Góc Tự Hào</h3>
+### Góc Tự Hào
 
-![alt text](public/GocTuHao.png)
+![Góc Tự Hào](public/GocTuHao.png)
 
-  <h3>Hoạt động kỷ niệm</h3>
+### Hoạt động kỷ niệm
 
-![alt text](public/HoatDongKyNiem.png)
+![Hoạt động kỷ niệm](public/HoatDongKyNiem.png)
 
-  <h3>Con đường độc lập</h3>
+### Con đường độc lập
 
-![alt text](public/ConDuongDocLap.png)
+![Con đường độc lập](public/ConDuongDocLap.png)
 
-  <h3>Đố vui lịch sử</h3>
+### Đố vui lịch sử
 
-![alt text](public/DoVuiLichSu.png)
+![Đố vui lịch sử](public/DoVuiLichSu.png)
 
-## ✨ Tính năng
+---
 
-<div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-<table style="width: 100%; border-collapse: collapse;">
-<tr style="background-color: #e9ecef;">
-<th style="padding: 12px; text-align: left; border-bottom: 2px solid #dee2e6;">Tính năng</th>
-<th style="padding: 12px; text-align: left; border-bottom: 2px solid #dee2e6;">Mô tả</th>
-</tr>
-<tr>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">🎨 Giao diện</td>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Thiết kế hiện đại, responsive trên mọi thiết bị (Mobile, Tablet, Desktop)</td>
-</tr>
-<tr>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">📸 Trình chiếu</td>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Slider hình ảnh và video tư liệu lịch sử với hiệu ứng chuyển động mượt mà</td>
-</tr>
-<tr>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">📅 Timeline</td>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Các mốc thời gian quan trọng trong cuộc đời Chủ tịch Hồ Chí Minh và lịch sử giải phóng miền Nam</td>
-</tr>
-<tr>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">🎵 Âm thanh</td>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Nhạc nền và âm thanh tư liệu lịch sử, có thể tắt/bật</td>
-</tr>
-<tr>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">🎮 Tương tác</td>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Modal chi tiết sự kiện, hiệu ứng chuyển động mượt mà với Framer Motion</td>
-</tr>
-<tr>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">🔍 Đố vui lịch sử</td>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Trắc nghiệm kiến thức lịch sử về Chủ tịch Hồ Chí Minh và sự kiện giải phóng miền Nam</td>
-</tr>
-<tr>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">📝 Góp ý</td>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Form để lại lời nhắn, góp ý và lời chúc tốt đẹp</td>
-</tr>
-<tr>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">🌐 Đa ngôn ngữ</td>
-<td style="padding: 12px; border-bottom: 1px solid #dee2e6;">Hỗ trợ tiếng Việt và tiếng Anh</td>
-</tr>
-</table>
-</div>
+## ✨ Tính năng nổi bật
+
+| Tính năng               | Mô tả                                                                                     |
+|------------------------|--------------------------------------------------------------------------------------------|
+| 🎨 Giao diện           | Thiết kế hiện đại, responsive trên mọi thiết bị (Mobile, Tablet, Desktop)                |
+| 📸 Trình chiếu         | Slider hình ảnh và video tư liệu lịch sử với hiệu ứng chuyển động mượt mà                |
+| 📅 Timeline            | Các mốc thời gian quan trọng trong cuộc đời Bác Hồ và lịch sử giải phóng miền Nam       |
+| 🎵 Âm thanh            | Nhạc nền và âm thanh tư liệu lịch sử, có thể bật/tắt dễ dàng                            |
+| 🎮 Tương tác           | Modal chi tiết sự kiện, hiệu ứng chuyển động với Framer Motion                          |
+| 🔍 Đố vui lịch sử      | Trắc nghiệm lịch sử, tính điểm, lưu điểm vào LocalStorage                               |
+| 📝 Góp ý               | Form gửi lời chúc và góp ý, hiển thị dạng slider tự động                                 |
+| 🌐 Đa ngôn ngữ         | Hỗ trợ tiếng Việt và tiếng Anh                                                            |
+
+---
 
 ## 🛠️ Công nghệ sử dụng
 
 - **Frontend Framework**: React JS
 - **UI Framework**: Material-UI (MUI), Tailwind CSS
-- **Animation**: Framer Motion
+- **Animation Library**: Framer Motion
 - **Carousel**: React Slick
 - **Build Tool**: Vite
 - **Package Manager**: npm
 - **Version Control**: Git
-- **Deployment**: Vercel
+- **Deploy**: Vercel
+
+---
 
 ## 👨‍💻 Tác giả
 
-- **Họ và tên**: Nguyễn Văn Thành Đại
-- **Mã sinh viên**: 3123411062
-- **Lớp**: DCT123C2
+- **Họ và tên**: Nguyễn Văn Thành Đại  
+- **Mã sinh viên**: 3123411062  
+- **Lớp**: DCT123C2  
 - **GitHub**: [ThanhDai2005](https://github.com/ThanhDai2005)
 
-<div align="center" style="margin-top: 40px; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
-  <p style="font-style: italic; color: #666;">
-    Website được thực hiện nhằm tôn vinh giá trị lịch sử dân tộc và thể hiện lòng tri ân các thế hệ đi trước. Cảm ơn bạn đã ghé thăm!
-  </p>
-</div>
+---
+
+> 🕊️ Website được thực hiện nhằm tôn vinh giá trị lịch sử dân tộc và thể hiện lòng tri ân các thế hệ đi trước.  
+> 💖 Cảm ơn bạn đã ghé thăm!
