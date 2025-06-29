@@ -20,8 +20,17 @@ function Search() {
     setOpen(false);
   };
 
+  function removeVietnameseTones(str) {
+    return str
+      .normalize("NFD") // chuẩn hóa Unicode
+      .replace(/[\u0300-\u036f]/g, "") // xóa dấu
+      .replace(/đ/g, "d")
+      .replace(/Đ/g, "D")
+      .toLowerCase();
+  }
+
   const searchResults = listEvent.filter((item) =>
-    item.title.toLowerCase().includes(keywords.toLowerCase())
+    removeVietnameseTones(item.title).includes(removeVietnameseTones(keywords))
   );
 
   return (

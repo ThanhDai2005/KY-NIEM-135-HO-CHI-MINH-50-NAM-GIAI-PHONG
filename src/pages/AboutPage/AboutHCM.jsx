@@ -34,7 +34,7 @@ function AboutHCM() {
       <div className="grid-cols-2 gap-6 lg:grid ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
@@ -68,7 +68,7 @@ function AboutHCM() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-12"
         >
